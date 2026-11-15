@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Task 3</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Back to portal</h1>
+  <a href="index.html">Main assignment page</a>
+  <script>
+    // TASK 03 – Shopping Discount
+    var userShoppingAmount = +prompt("Enter your shopping amount")
+    alert(`shopping: ${userShoppingAmount}`)
+    if (userShoppingAmount >= 5000) {
+      var discount = userShoppingAmount * 15 / 100
+      var finalAmount = userShoppingAmount - discount
+      alert(`discount: ${discount} `)
+      alert(`final Amount: ${finalAmount}`)
+    }
+    else {
+      var smallDiscount = userShoppingAmount * 5 / 100
+      var smallFinalAmount = userShoppingAmount - smallDiscount
+      alert(`discount: ${smallDiscount} `)
+      alert(`final Amount: ${smallFinalAmount}`)
+    }
+  </script>
+</body>
+
+</html>

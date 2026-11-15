@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 10</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Back to portal</h1>
+  <a href="index.html">Main assignment page</a>
+  <script>
+    // TASK 10 – Simple Calculator
+   var num1 = +prompt("Enter first number")
+   var num2 = +prompt("Enter second number")
+   var operator = prompt("Select an operator\n+\n-\n*\n/")
+   if(operator=="+"){
+    var addition = num1+num2
+    alert(`First number: ${num1}\n Second Number: ${num2}\nOperator: +\n Result: ${addition} `)
+   }else{
+    if(operator=="-"){
+      var subtract = num1-num2
+      alert(`First number: ${num1}\n Second Number: ${num2}\nOperator: -\n Result: ${subtract} `)
+    }
+    else{
+      if(operator=="*"){
+        var multiply = num1*num2
+         alert(`First number: ${num1}\n Second Number: ${num2}\nOperator: *\n Result: ${multiply}`)
+
+      } else{
+        if(operator=="/"){
+          var divide = num1/num2
+          alert(`First number: ${num1}\n Second Number: ${num2}\nOperator: /\n Result: ${divide}`)
+
+        }
+      }
+    }
+   }
+   
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Task 7</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Back to portal</h1>
+  <a href="index.html">Main assignment page</a>
+  <script>
+    //  TASK 07 – Movie Ticket
+    var userAge = +prompt("Enter your age")
+    var ticketPrice = +prompt("Enter ticket price")
+    alert(`Age: ${userAge}`)
+    alert(`Ticket price: ${ticketPrice}`)
+    if (userAge <= 12) {
+      var discount = ticketPrice * 50 / 100
+      var finalPrice = ticketPrice - discount
+      alert(`Discount: ${discount}`)
+      alert(`Final Price: ${finalPrice}`)
+    } else {
+      alert(`Final price: ${ticketPrice}`)
+    }
+  </script>
+</body>
+
+</html>

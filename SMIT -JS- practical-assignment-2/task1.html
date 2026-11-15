@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 1</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Back to portal</h1>
+  <a href="index.html">Main assignment page</a>
+
+  <script>
+//  TASK 01 – ATM Withdrawal
+var accountBalance = +prompt("Please enter your account balance")
+var accountWithdrawl = +prompt("Please enter your withdrawal amount")
+var remainingBalance = accountBalance - accountWithdrawl
+alert(`Account Balance:  ${accountBalance}`)
+alert(`Withdrawal:  ${accountWithdrawl}`)
+
+if(accountBalance>=accountWithdrawl){
+  alert(`Remaining Balance: ${remainingBalance}`)
+}else{
+  alert("You have insufficient balance")
+}
+
+
+
+  </script>
+</body>
+</html>

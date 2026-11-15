@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Back to portal</h1>
+<a href="index.html">Main assignment page</a>
+
+
+    <script>
+// TASK 08 – Marks Percentage
+ var subject1 = Number(prompt("Please enter marks of first subject out of 100"))
+var subject2 = Number(prompt("Please enter marks of second subject out of 100"))
+var subject3 = Number(prompt("Please enter marks of third subject out of 100"))
+var subject4 = Number(prompt("Please enter marks of fourth subject out of 100"))
+var subject5 = Number(prompt("Please enter marks of fifth subject out of 100"))
+ 
+ var obtMarks = subject1 + subject2 + subject3 + subject4 + subject5
+ var maxMarks = 500
+ var percentage = obtMarks/maxMarks * 100
+
+ alert("Total Marks: " +obtMarks+ "/" + maxMarks)
+ alert("Percentage: " + percentage.toFixed(2) + "%")
+
+</script>
+</body>
+</html>

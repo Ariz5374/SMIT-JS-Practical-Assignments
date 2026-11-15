@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 9</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Back to portal</h1>
+  <a href="index.html">Main assignment page</a>
+  <script>
+// TASK 09 – Restaurant Order
+var userBalance = +prompt("Enter your balance")
+var foodItem = prompt("Enter your food item\n Pizza: 1200\n Burger: 500")
+var price
+if(foodItem=="Burger"){
+   price = 500
+}else{
+  if(foodItem=="Pizza"){
+    price = 1200
+  }else{
+    price = 0
+  }
+}
+if(price==0){
+  alert("food item is not avaliable")
+} else{
+ if(userBalance>=price){
+  alert("Order Confirmed!")
+  var remainingBalance = userBalance - price
+  alert(`Remaining Balance: ${remainingBalance}`)
+ }else{
+  alert("Insufficient Balance")
+ }
+
+
+}
+
+
+
+
+
+
+  </script>
+</body>
+</html>
