@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>Back to portal</h1>
+    <a href="index.html">Main assignment page</a>
+    <script>
+        var menuItems = [
+            "Chicken Biryani",
+            "Beef Biryani",
+            "Chicken Pulao",
+            "Special Biryani",
+        ];
+        var menuPrices = [350, 450, 300, 550];
+        var orders = [];
+
+        alert(`Welcome to Royal Biryani Restaurant!\n
+        1. ${menuItems[0]} - ${menuPrices[0]}Rs\n
+        2. ${menuItems[1]} - ${menuPrices[1]}Rs\n
+        3. ${menuItems[2]} - ${menuPrices[2]}Rs\n
+        4. ${menuItems[3]} - ${menuPrices[3]}Rs\n
+        `);
+        var userChoice = +prompt("Please Select your order by typing (1-4)");
+
+        var selectedItem;
+        var price;
+
+        if (userChoice == "1") {
+            selectedItem = menuItems[0];
+            price = menuPrices[0];
+        } else if (userChoice == "2") {
+            selectedItem = menuItems[1];
+            price = menuPrices[1];
+        } else if (userChoice == "3") {
+            selectedItem = menuItems[2];
+            price = menuPrices[2];
+        } else if (userChoice == "4") {
+            selectedItem = menuItems[3];
+            price = menuPrices[3];
+        } else {
+            alert("Please select a valid item number");
+        }
+
+        var plateQuantity = +prompt(
+            `How many orders of ${selectedItem} do you want??`,
+        );
+
+        if (plateQuantity >= "1") {
+            if (plateQuantity >= "5") {
+                alert("Congrats You have won a 10% discount");
+            } else {
+                alert("No discount applied");
+            }
+        } else {
+            alert("Please enter a valid number");
+        }
+
+        var totalPrice = price * plateQuantity;
+        var discount;
+        if (plateQuantity >= "5") {
+            discount = totalPrice * 0.10;
+        } else {
+            discount = 0;
+        }
+
+        var orderType = +prompt(
+            "What is your order type?\n 1.Dine-in\n2.Takeaway\n Please select from (1-2)",
+        );
+        var extraCharges;
+        var orderTypeName;
+
+        if (orderType == "1") {
+            extraCharges = 50;
+            totalPrice = totalPrice + extraCharges;
+            orderTypeName = "Dine-in"
+        } else if (orderType == "2") {
+            extraCharges = 30;
+            totalPrice = totalPrice + extraCharges;
+            orderTypeName = "Takeaway"
+        } else {
+            alert("Please enter a valid order type");
+        }
+
+        var finalBill = totalPrice - discount;
+        alert(`Your final bill is ${finalBill}`);
+
+        var order = selectedItem + "-" + plateQuantity + "Plates" + "-" + finalBill + "Rs"
+
+        orders.push(order)
+
+        var cancelOrder = +prompt("Do you want to cancel your last order?(1-2)\n1.yes\n 2.No")
+
+        if (cancelOrder == "1") {
+            orders.pop()
+            alert("Last order Canceled")
+        } else {
+            alert("No order canceled")
+        }
+
+        var removeFirst = +prompt("Remove first pending order?(1-2)\n1. Yes\n2. No")
+        if (removeFirst == "1") {
+            orders.shift()
+            alert("First pending order removed")
+        } else {
+            alert("first pending order not removed")
+        }
+        console.log("----- ROYAL BIRYANI -----");
+        console.log("Item:", selectedItem);
+        console.log("Quantity:", plateQuantity);
+        console.log("Price:", price);
+        console.log("Subtotal:", totalPrice);
+        console.log("Discount:", discount);
+        console.log("Order Type:", orderTypeName);
+        console.log("Packaging Charges:", extraCharges);
+        console.log("Final Bill:", finalBill);
+    </script>
+</body>
+
+</html>
